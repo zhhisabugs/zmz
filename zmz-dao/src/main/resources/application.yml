@@ -1,0 +1,14 @@
+#Redis\u914D\u7F6E
+spring:
+  redis:
+    database: 0
+    host: 10.17.149.135
+    port: 6379
+    password: Gyy_2019
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+
