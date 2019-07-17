@@ -1,4 +1,4 @@
-package com.tiger.zmz.common.dto;
+package com.tiger.zmz.common.model;
 
 import com.alibaba.fastjson.JSONObject;
 import lombok.Getter;
@@ -17,6 +17,16 @@ public class User {
   private Integer age;
   private Integer sex;
   private String phone;
+
+  public User() {
+  }
+
+  public User(String name, Integer age, Integer sex, String phone) {
+    this.name = name;
+    this.age = age;
+    this.sex = sex;
+    this.phone = phone;
+  }
 
   @Override
   public String toString() {
