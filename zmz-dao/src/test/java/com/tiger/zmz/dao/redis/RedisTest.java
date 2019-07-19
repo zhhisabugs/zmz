@@ -1,6 +1,6 @@
 package com.tiger.zmz.dao.redis;
 
-import com.tiger.zmz.common.model.User;
+import com.tiger.zmz.common.model.SysUser;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -35,16 +35,16 @@ public class RedisTest {
   }
 
   public void testObj() throws Exception {
-    User user = new User("张三", 25, 1, "13090908909");
-    ValueOperations<String, User> operations = redisTemplate.opsForValue();
-    operations.set("admin.user", user);
-    operations.set("admin.user.time", user, 1, TimeUnit.SECONDS);
+    SysUser sysUser = new SysUser("张三", 25, 1, "13090908909");
+    ValueOperations<String, SysUser> operations = redisTemplate.opsForValue();
+    operations.set("admin.sysUser", sysUser);
+    operations.set("admin.sysUser.time", sysUser, 1, TimeUnit.SECONDS);
     Thread.sleep(1000);
-    boolean exists = redisTemplate.hasKey("admin.user");
+    boolean exists = redisTemplate.hasKey("admin.sysUser");
     if (exists) {
-      System.out.printf("exist user");
+      System.out.printf("exist sysUser");
     } else {
-      System.out.println("user does not exist");
+      System.out.println("sysUser does not exist");
     }
   }
 }

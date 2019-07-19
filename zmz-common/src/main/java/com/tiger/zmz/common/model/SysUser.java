@@ -11,17 +11,17 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class User {
+public class SysUser {
   private Integer id;
   private String name;
   private Integer age;
   private Integer sex;
   private String phone;
 
-  public User() {
+  public SysUser() {
   }
 
-  public User(String name, Integer age, Integer sex, String phone) {
+  public SysUser(String name, Integer age, Integer sex, String phone) {
     this.name = name;
     this.age = age;
     this.sex = sex;

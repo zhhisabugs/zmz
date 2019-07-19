@@ -1,6 +1,6 @@
 package com.tiger.zmz.client.controller;
 
-import com.tiger.zmz.common.model.User;
+import com.tiger.zmz.common.model.SysUser;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +18,7 @@ public class UserController {
 
   @GetMapping("/get")
   @Cacheable(value = "user-key")
-  public User getUser(@RequestParam("id") Integer id) {
+  public SysUser getUser(@RequestParam("id") Integer id) {
     return null;
   }
 }

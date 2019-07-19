@@ -19,7 +19,7 @@
 
     <!-- 指定生成 Mapper 的继承模板 -->
     <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-      <property name="mappers" value="com.tiger.zmz.dao.mapper.MyMapper"/>
+      <property name="mappers" value="com.tiger.zmz.dao.mapper.IBaseMapper"/>
     </plugin>
 
     <!-- 生成 JavaBean 对象重写 toString方法 -->
@@ -64,7 +64,7 @@
       <property name="enableSubPackages" value="false"/>
     </sqlMapGenerator>
 
-    <!-- targetPackage：mapper接口dao生成的位置 -->
+    <!-- mapper接口dao生成的位置 -->
     <javaClientGenerator targetPackage="com.tiger.zmz.dao.mapper" targetProject="src/main/java" type="XMLMAPPER">
       <!-- enableSubPackages:是否让schema作为包的后缀 -->
       <property name="enableSubPackages" value="false"/>
