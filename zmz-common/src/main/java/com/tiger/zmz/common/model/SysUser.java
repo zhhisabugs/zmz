@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 /**
  * @author zhanghai2
  * @Description: 用户类
@@ -12,21 +14,16 @@ import lombok.Setter;
 @Getter
 @Setter
 public class SysUser {
-  private Integer id;
+  private Long id;
+  private String account;
+  private String password;
   private String name;
-  private Integer age;
-  private Integer sex;
-  private String phone;
-
-  public SysUser() {
-  }
-
-  public SysUser(String name, Integer age, Integer sex, String phone) {
-    this.name = name;
-    this.age = age;
-    this.sex = sex;
-    this.phone = phone;
-  }
+  private String telephone;
+  private String idCard;
+  private String email;
+  private Integer status;
+  private LocalDateTime createTime;
+  private LocalDateTime modifyTime;
 
   @Override
   public String toString() {

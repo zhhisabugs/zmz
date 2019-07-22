@@ -41,6 +41,7 @@
     <lombok.version>1.18.8</lombok.version>
   </properties>
 
+  <!-- 只是声明依赖，并不实现引入，方便统一管理版本，子项目需要显示的声明需要用的依赖 -->
   <dependencyManagement>
     <dependencies>
       <dependency>

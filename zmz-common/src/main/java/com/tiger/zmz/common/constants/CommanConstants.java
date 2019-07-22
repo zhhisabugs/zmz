@@ -6,5 +6,5 @@ package com.tiger.zmz.common.constants;
  * @date 2019-7-16
  */
 public class CommanConstants {
-
+  public static final String SUCCESS_MESSAGE = "OK";
 }

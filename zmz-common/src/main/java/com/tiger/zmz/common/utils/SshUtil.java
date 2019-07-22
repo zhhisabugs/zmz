@@ -17,6 +17,9 @@ import java.util.Properties;
 @Slf4j
 public class SshUtil {
 
+  // 默认连接超时时长10秒
+  public static int timeout = 10000;
+
   public static String execCommandByJSch(Session session, String command, String resultEncoding) {
     ChannelExec channelExec = null;
     String result = StringUtils.EMPTY;
@@ -57,6 +60,7 @@ public class SshUtil {
     try {
       JSch jsch = new JSch();
       session = jsch.getSession(username, host, port);
+      session.setTimeout(timeout);
       session.setPassword(password);
       Properties sshConfig = new Properties();
       // 第一次访问服务器时不用输入yes
