@@ -93,11 +93,47 @@
       </dependency>
       <dependency>
         <groupId>com.tiger</groupId>
+        <artifactId>zmz-service</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.tiger</groupId>
         <artifactId>zmz-dao</artifactId>
         <version>${project.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <!-- maven 多环境打包 -->
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <profiles.active>dev</profiles.active>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+    <profile>
+      <id>sit</id>
+      <properties>
+        <profiles.active>sit</profiles.active>
+      </properties>
+    </profile>
+    <profile>
+      <id>uat</id>
+      <properties>
+        <profiles.active>uat</profiles.active>
+      </properties>
+    </profile>
+    <profile>
+      <id>prod</id>
+      <properties>
+        <profiles.active>prod</profiles.active>
+      </properties>
+    </profile>
+  </profiles>
 
   <repositories>
     <repository>
