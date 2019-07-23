@@ -23,6 +23,8 @@
   <modules>
     <module>zmz-common</module>
     <module>zmz-client</module>
+    <module>zmz-service</module>
+    <module>zmz-dao</module>
   </modules>
 
   <properties>

@@ -34,8 +34,12 @@ public class RedisTest {
     Assert.assertEquals("zmz", stringRedisTemplate.opsForValue().get("zh-test"));
   }
 
+  @Test
   public void testObj() throws Exception {
-    SysUser sysUser = new SysUser("张三", 25, 1, "13090908909");
+    SysUser sysUser = new SysUser();
+    sysUser.setAccount("test");
+    sysUser.setPassword("123456");
+    sysUser.setName("test");
     ValueOperations<String, SysUser> operations = redisTemplate.opsForValue();
     operations.set("admin.sysUser", sysUser);
     operations.set("admin.sysUser.time", sysUser, 1, TimeUnit.SECONDS);
