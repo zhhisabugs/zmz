@@ -1,2 +1,2 @@
 # zmz
-just for demo
+just for spring boot demo
