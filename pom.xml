@@ -30,6 +30,7 @@
         <module>zmz-client</module>
         <module>zmz-service</module>
         <module>zmz-dao</module>
+        <module>zmz-demo</module>
     </modules>
 
     <properties>

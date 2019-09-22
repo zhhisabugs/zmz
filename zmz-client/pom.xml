@@ -43,6 +43,7 @@
     <dependency>
       <groupId>com.tiger</groupId>
       <artifactId>zmz-common</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
 
