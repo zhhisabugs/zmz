@@ -1,11 +1,12 @@
 package com.tiger.zmz.demo.service.impl;
 
-import com.tiger.zmz.demo.dao.AccountMapper;
 import com.tiger.zmz.demo.dao.IAccountDAO;
-import com.tiger.zmz.demo.model.Account;
+import com.tiger.zmz.demo.entity.Account;
+import com.tiger.zmz.demo.mapper.AccountMapper;
 import com.tiger.zmz.demo.service.IAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -28,10 +29,19 @@ public class AccountService implements IAccountService {
         return accountMapper.add(account);
     }
 
+    @Transactional
     @Override
     public int update(Account account) {
         // return accountDAO.update(account);
-        return accountMapper.update(account);
+        // return accountMapper.update(account);
+        Account account1 = new Account();
+        account1.setName("ss");
+        account1.setMoney(10000);
+        accountMapper.add(account1);
+        if (account.getMoney() < 0) {
+            int i = 1 / 0;
+        }
+        return accountMapper.update2(account);
     }
 
     @Override
@@ -43,7 +53,8 @@ public class AccountService implements IAccountService {
     @Override
     public Account findAccountById(int id) {
         // return accountDAO.findAccountById(id);
-        return accountMapper.findAccountById(id);
+        // return accountMapper.findAccountById(id);
+        return accountMapper.getAccountById(id);
     }
 
     @Override

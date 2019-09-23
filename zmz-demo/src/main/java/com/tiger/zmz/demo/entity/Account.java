@@ -1,4 +1,4 @@
-package com.tiger.zmz.demo.model;
+package com.tiger.zmz.demo.entity;
 
 import lombok.Data;
 

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * @author zhanghai2
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableConfigurationProperties(ConfigBean.class)
 public class DemoController {
 
+    @ApiIgnore
     @RequestMapping("/")
     public String index() {
         return "hello";

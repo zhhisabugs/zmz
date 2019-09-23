@@ -4,6 +4,26 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.199.130:3306/demo
+#    url: jdbc:mysql://192.168.199.130:3306/demo # home
+    url: jdbc:mysql://10.17.149.134:3306/demo # office
     username: root
     password: 123456
+#  data:
+#    mongodb:
+#      uri: mongodb://10.17.149.134:27017/demo
+  redis:
+    host: 10.17.149.134
+    port: 6379
+    database: 0
+    password: 123456
+    jedis:
+      pool:
+        max-idle: 8
+        max-wait: -1
+        max-active: 8
+        min-idle: 0
+    timeout: 5000
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.tiger.zmz.demo.entity

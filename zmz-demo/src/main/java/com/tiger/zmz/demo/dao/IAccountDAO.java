@@ -1,6 +1,6 @@
 package com.tiger.zmz.demo.dao;
 
-import com.tiger.zmz.demo.model.Account;
+import com.tiger.zmz.demo.entity.Account;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.tiger.zmz.demo.dao.impl;
 
 import com.tiger.zmz.demo.dao.IAccountDAO;
-import com.tiger.zmz.demo.model.Account;
+import com.tiger.zmz.demo.entity.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

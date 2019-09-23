@@ -1,13 +1,12 @@
-package com.tiger.zmz.demo.dao;
+package com.tiger.zmz.demo.mapper;
 
-import com.tiger.zmz.demo.model.Account;
+import com.tiger.zmz.demo.entity.Account;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -16,7 +15,7 @@ import java.util.List;
  * @date 2019/9/22
  */
 @Mapper
-@Repository
+// @Repository
 public interface AccountMapper {
     @Insert("insert into account(name, money) values(#{name}, #{money})")
     int add(Account account);
@@ -32,4 +31,8 @@ public interface AccountMapper {
 
     @Select("select id, name, money from account")
     List<Account> findAccoundList();
+
+    Account getAccountById(@Param("id") int id);
+
+    int update2(Account account);
 }
