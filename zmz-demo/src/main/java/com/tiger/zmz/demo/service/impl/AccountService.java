@@ -5,6 +5,7 @@ import com.tiger.zmz.demo.entity.Account;
 import com.tiger.zmz.demo.mapper.AccountMapper;
 import com.tiger.zmz.demo.service.IAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -61,5 +62,17 @@ public class AccountService implements IAccountService {
     public List<Account> findAccountList() {
         // return accountDAO.findAccountList();
         return accountMapper.findAccoundList();
+    }
+
+    @Cacheable("account")
+    @Override
+    public Account testCacheQuery(int id) {
+        try {
+            long noCacheLate = 3000L;
+            Thread.sleep(noCacheLate);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return this.findAccountById(id);
     }
 }

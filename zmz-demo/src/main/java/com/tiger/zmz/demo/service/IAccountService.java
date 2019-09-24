@@ -18,4 +18,6 @@ public interface IAccountService {
     Account findAccountById(int id);
 
     List<Account> findAccountList();
+
+    Account testCacheQuery(int id);
 }

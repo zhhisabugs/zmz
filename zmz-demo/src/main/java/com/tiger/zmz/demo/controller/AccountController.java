@@ -25,9 +25,15 @@ public class AccountController {
     IAccountService accountService;
 
     /**
-     * 创建账户
-     * @param account
-     * @return
+     * @api {POST} /add 创建账户
+     * @apiGroup Accound
+     * @apiVersion 1.0.0
+     * @apiDescription 用于注册用户
+     * @apiParam {Account} account 账户对象
+     * @apiParamExample {json} 请求示例：
+     *                              {"name":"zhangsan", "money":1000}
+     * @apiSuccess (200) {int} code 0成功 1失败
+     * @apiSuccess (200) {String} msg 信息
      */
     @ApiOperation(value = "创建账户", notes = "创建账户")
     @ApiImplicitParam(name = "account", value = "账户实体", required = true, dataType = "Account")
@@ -61,5 +67,14 @@ public class AccountController {
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public List<Account> findAccountList() {
         return accountService.findAccountList();
+    }
+
+    @ApiOperation(value = "测试缓存", notes = "通过id查找账户")
+    @RequestMapping(value = "/cache", method = RequestMethod.GET)
+    public void testCacheQuery() {
+        System.out.println(accountService.testCacheQuery(1).toString());
+        System.out.println(accountService.testCacheQuery(2).toString());
+        System.out.println(accountService.testCacheQuery(3).toString());
+        System.out.println(accountService.testCacheQuery(4).toString());
     }
 }
