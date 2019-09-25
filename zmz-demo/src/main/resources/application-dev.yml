@@ -1,9 +1,11 @@
-
 server:
   port: 8888
   servlet:
     context-path: /demo
+
 spring:
+  application:
+    name: zmz-demo
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
 #    url: jdbc:mysql://192.168.199.130:3306/demo # home
@@ -33,3 +35,8 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: com.tiger.zmz.demo.entity
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

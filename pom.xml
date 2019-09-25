@@ -20,7 +20,7 @@
     <parent>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-parent</artifactId>
-        <version>Greenwich.RELEASE</version>
+        <version>Greenwich.SR3</version>
         <!-- relativePath设置空值将始终从仓库而不从本地获取 -->
         <!-- <relativePath/> -->
     </parent>
