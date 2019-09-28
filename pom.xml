@@ -31,6 +31,9 @@
         <module>zmz-dao</module>
         <module>zmz-demo</module>
         <module>zmz-eureka</module>
+        <module>zmz-zuul</module>
+        <module>zmz-config</module>
+        <module>zmz-client</module>
     </modules>
 
     <properties>

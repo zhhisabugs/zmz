@@ -13,6 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface HiService {
 
     @RequestMapping("/hello")
-    String sayHie(@RequestParam(value = "name") String name);
+    String sayHi(@RequestParam(value = "name") String name);
 
 }

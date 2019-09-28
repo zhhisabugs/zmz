@@ -1,0 +1,13 @@
+version: '3'
+services:
+  zmz-eureka:
+    image: zmz/zmz-eureka
+    restart: always
+    ports:
+      - 8761:8761
+
+  zmz-config:
+    image: zmz/zmz-config
+    restart: always
+    ports:
+      - 8888:8888

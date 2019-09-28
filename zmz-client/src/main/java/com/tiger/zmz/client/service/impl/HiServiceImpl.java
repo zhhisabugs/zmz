@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class HiServiceImpl implements HiService {
     @Override
-    public String sayHie(String name) {
+    public String sayHi(String name) {
         return "Sorry, Some error occur";
     }
 }

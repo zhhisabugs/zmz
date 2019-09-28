@@ -27,4 +27,9 @@ public class ZmzClientApplication {
         return new RestTemplate();
     }
 
+    // @Bean
+    // public AlwaysSampler defaultSampler(){
+    //     return new AlwaysSampler();
+    // }
+
 }
